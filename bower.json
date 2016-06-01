@@ -1,0 +1,25 @@
+{
+  "name": "ikn",
+  "description": "indigenous knowledge network",
+  "main": "app.js",
+  "authors": [
+    "amit chanchal"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "indigenous",
+    "knowledge",
+    "network"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
