@@ -3,16 +3,17 @@ var exhbs = require('express-handlebars');
 
 var app = express();
 
+var openRoutes = require('./src/routes/open_routes'),
+ 	labRoutes = require('./src/routes/lab_routes'),
+ 	memberRoutes = require('./src/routes/member_routes');
+
 app.engine('handlebars', exhbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
-app.get('/', function(req,res){
-	res.send("hello");
-});
+app.use('/', openRoutes);
+app.use('/labs', labRoutes);
+app.use('/members', memberRoutes);
 
-app.get('/about', function(req, res){
-	res.send("hello from about");
-});
 
 
 app.listen(3000, function(){
