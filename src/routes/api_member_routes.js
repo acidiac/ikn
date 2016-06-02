@@ -7,11 +7,17 @@
 
 //Member routes
 
-var express = require('express');
+var express = require('express'),
+	mongoose require('mongoose'),
+	bodyParser = require('body-parser'),
+	methodOverride = require('method-override');
+
 var router = express.Router();
 
+router.use(bodyParser.urlencoded({extended:true}));
 
 // middleware that is specific to this router
+
 /*
 router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
@@ -19,9 +25,6 @@ router.use(function timeLog(req, res, next) {
 });
 */
 
-router.get('/', function(req,res){
-	res.render("member_home");
-});
 
 
 

@@ -6,8 +6,13 @@
  */
 
 
-var express = require('express');
-var exhbs = require('express-handlebars');
+var express = require('express'),
+	path = require('path'),
+	favicon = require('serve-favicon'),
+	cookieParser = require('cookie-parser'),
+	bodyParser = require('body-parser'),
+	db = require('./models/db'),
+	exhbs = require('express-handlebars');
 
 var app = express();
 
@@ -15,9 +20,12 @@ var openRoutes = require('./src/routes/open_routes'),
  	labRoutes = require('./src/routes/lab_routes'),
  	memberRoutes = require('./src/routes/member_routes');
 
+//Defining view engine
 app.engine('handlebars', exhbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
+//Defining folder to serve static files
+app.use('/static', express.static(__dirname + '/public'));
 app.use('/', openRoutes);
 app.use('/labs', labRoutes);
 app.use('/members', memberRoutes);
