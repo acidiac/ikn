@@ -1,3 +1,10 @@
+/*!
+ * Indigenous Knowledge Network Platform 
+ * Author: Amit Chanchal, amit.chanchal@hotmail.com
+ * SUI, IKN(Anthill)
+ * June 2016, Bangalore
+ */
+
 // grab the things we need
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
