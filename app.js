@@ -11,7 +11,7 @@ var express = require('express'),
 	favicon = require('serve-favicon'),
 	cookieParser = require('cookie-parser'),
 	bodyParser = require('body-parser'),
-	db = require('./models/db'),
+	db = require('./src/models/db'),
 	exhbs = require('express-handlebars');
 
 var app = express();
